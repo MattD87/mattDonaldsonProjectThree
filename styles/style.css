@@ -283,3 +283,7 @@ span {
 body {
   background: cyan;
 }
+
+.selected {
+  color: red;
+}
