@@ -1,5 +1,20 @@
-a {
-  text-decoration: none;
-  background: red;
-  color: white;
+.submit {
+    text-align: center;
+    padding: 2%;   
+}
+
+.submit a {
+    border: 1px solid black;
+    text-decoration: none;
+    text-align: center;      
+    background-color: white;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.submit a:hover {
+    color: blue;
 }

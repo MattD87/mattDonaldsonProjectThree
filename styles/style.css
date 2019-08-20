@@ -224,16 +224,60 @@ textarea {
 .wrapper {
   max-width: 800px;
   margin: auto;
+  border: 1px solid black;
+  background: white;
 }
 
 html {
   font-size: 20px;
 }
 
-a {
+header {
+  height: 200px;
+  background: cyan;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header h1 {
+  font-size: 60px;
+  margin: auto;
+  color: yellow;
+  text-shadow: 2px 2px black;
+}
+
+span {
+  display: block;
+}
+
+.submit {
+  text-align: center;
+  padding: 2%;
+}
+
+.submit a {
+  border: 1px solid black;
   text-decoration: none;
-  background: red;
-  color: white;
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.submit a:hover {
+  color: blue;
+}
+
+.quiz {
+  display: none;
+}
+
+.results {
+  display: none;
 }
 
 body {
