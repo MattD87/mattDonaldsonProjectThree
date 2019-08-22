@@ -5,27 +5,32 @@ quizApp.categories = {
     200: {
       question: "Question here",
       answers: ["answer 1", "answer 2", "answer 3", "answer 4"],
-      correct: 1
+      correct: 1,
+      cash: 200
     },
     400: {
       question: "Question here",
       answers: ["answer 1", "answer 2", "answer 3", "answer 4"],
-      correct: 1
+      correct: 1,
+      cash: 400
     },
     600: {
       question: "Question here",
       answers: ["answer 1", "answer 2", "answer 3", "answer 4"],
-      correct: 1
+      correct: 1,
+      cash: 600
     },
     800: {
       question: "Question here",
       answers: ["answer 1", "answer 2", "answer 3", "answer 4"],
-      correct: 1
+      correct: 1,
+      cash: 800
     },
     1000: {
       question: "Question here",
       answers: ["answer 1", "answer 2", "answer 3", "answer 4"],
-      correct: 1
+      correct: 1,
+      cash: 1000
     }
   },
   geography: {

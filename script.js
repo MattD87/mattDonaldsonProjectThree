@@ -5,32 +5,27 @@ const questions = [
   {
     title: `200$ Question`,
     answers: [`answer 1`, `answer 2`, `answer 3`, `answer 4`],
-    correct: 1,
-    cash:200
+    correct: 1
   },
   {
     title: `$400 question`,
     answers: [`answer 1`, `answer 2`, `answer 3`, `answer 4`],
-    correct: 1,
-    cash: 400
+    correct: 1
   },
   {
     title: `$600 question`,
     answers: [`answer 1`, `answer 2`, `answer 3`, `answer 4`],
-    correct: 1,
-    cash: 600
+    correct: 1
   },
   {
     title: `$800 question`,
     answers: [`answer 1`, `answer 2`, `answer 3`, `answer 4`],
-    correct: 1,
-    cash: 800
+    correct: 1
   },
   {
     title: `$1000 question`,
     answers: [`answer 1`, `answer 2`, `answer 3`, `answer 4`],
-    correct: 1,
-    cash: 1000
+    correct: 1
   }
 ];
 
@@ -55,7 +50,7 @@ $(document).ready(() => {
     e.preventDefault();
     if ($(`li.selected`).length) {
       let guess = parseInt($(`li.selected`).attr(`id`));
-      //console.log(guess);
+      // console.log(guess);
       checkAnswer(guess);
     } else {
       alert(`Please select an answer, you want to win fake money don't you?`);
