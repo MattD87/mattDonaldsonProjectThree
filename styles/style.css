@@ -323,6 +323,15 @@ span {
   left: 0;
 }
 
+.questionContainer {
+  border: 1px solid black;
+  background: cyan;
+}
+
+.selected {
+  color: red;
+}
+
 .results {
   display: none;
   padding: 40px;
