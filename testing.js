@@ -166,32 +166,34 @@ quizApp.startQuiz = function() {
 quizApp.showQuestion = function() {
   $(".button").on("click", function() {
     const buttonId = $(this).attr("id");
-    // console.log(buttonId);
     quizApp.questionContent(buttonId);
   });
 };
 //function expands empty div to cover quizboard
 quizApp.growQuestion = function() {
   $(".button").on("click", function() {
-    $('.questionContainer')
-    // .toggleClass("change-size")
-    .show().addClass('change-size').fadeIn(600)
+    $(".questionContainer")
+      .show()
+      .addClass("change-size")
+      .fadeIn(600);
   });
 };
 
 //function pulls question from array that corresponds to button and dynamically adds content
-quizApp.questionContent =function (clickId){
-   for (let i = 0; i < quizApp.questions.length; i++ ){                                
+quizApp.questionContent = function(clickId) {
+  for (let i = 0; i < quizApp.questions.length; i++) {
     if (clickId == quizApp.questions[i].id) {
       quizApp.currentQuestion = quizApp.questions[i];
       const question = quizApp.questions[i].title;
       const answers = quizApp.questions[i].answers;
-      $('.questionContainer').html(`<h2>${question}</h2><ul class="questions"></ul>`);
+      $(".questionContainer").html(
+        `<h2>${question}</h2><ul class="questions"></ul>`
+      );
       for (let i = 0; i < answers.length; i++) {
-        $('.questions').append(`<li>${answers[i]}</li>`);        
+        $(".questions").append(`<li>${answers[i]}</li>`);
       }
-    };
-  };
+    }
+  }
 };
 
 //adds selected class to answer that is clicked for user feedback
@@ -200,36 +202,35 @@ quizApp.selectOption = function() {
     $(`.selected`).removeClass(`selected`);
     $(this).addClass(`selected`);
   });
-}
+};
 
 //function to convert selected answer into number and checks selected option against correct answer
 quizApp.checkAnswer = function(answer) {
-      quizApp.answersArray = quizApp.currentQuestion.answers;
-      quizApp.correctAnswer = quizApp.answersArray[quizApp.currentQuestion.correct];
-      if (answer === quizApp.correctAnswer) {
-        quizApp.score = quizApp.score + quizApp.currentQuestion.cash
-        // console.log(quizApp.score);
-        $('.scoreBoard p').html(`${quizApp.score}`)
-      } else {
-        quizApp.score = quizApp.score - quizApp.currentQuestion.cash
-        // console.log(quizApp.score);
-        $('.scoreBoard p').html(`${quizApp.score}`);
-      };
-    $('.questionContainer').hide();
-}
+  quizApp.answersArray = quizApp.currentQuestion.answers;
+  quizApp.correctAnswer = quizApp.answersArray[quizApp.currentQuestion.correct];
+  if (answer === quizApp.correctAnswer) {
+    quizApp.score = quizApp.score + quizApp.currentQuestion.cash;
+    // console.log(quizApp.score);
+    $(".scoreBoard p").html(`${quizApp.score}`);
+  } else {
+    quizApp.score = quizApp.score - quizApp.currentQuestion.cash;
+    // console.log(quizApp.score);
+    $(".scoreBoard p").html(`${quizApp.score}`);
+  }
+  $(".questionContainer").hide();
+};
 
 quizApp.errorCheck = function() {
-  $('.guess a').click(function(e){
+  $(".guess a").click(function(e) {
     e.preventDefault();
     quizApp.guess = $("li.selected").text();
     if (quizApp.guess) {
-      quizApp.checkAnswer(quizApp.guess)
+      quizApp.checkAnswer(quizApp.guess);
     } else {
-      alert('You need to pick an answer');
-     }
-  })
-}
-    
+      alert("You need to pick an answer");
+    }
+  });
+};
 
 //initialization
 quizApp.init = function() {
