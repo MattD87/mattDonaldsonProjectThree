@@ -173,9 +173,11 @@ quizApp.showQuestion = function() {
 quizApp.growQuestion = function() {
   $(".button").on("click", function() {
     $(".questionContainer")
+      // .animate({
+      //   opacity: 0.8,      
+      // }, "slow")
       .show()
       .addClass("change-size")
-      .fadeIn(600);
   });
 };
 
@@ -210,14 +212,13 @@ quizApp.checkAnswer = function(answer) {
   quizApp.correctAnswer = quizApp.answersArray[quizApp.currentQuestion.correct];
   if (answer === quizApp.correctAnswer) {
     quizApp.score = quizApp.score + quizApp.currentQuestion.cash;
-    // console.log(quizApp.score);
     $(".scoreBoard p").html(`${quizApp.score}`);
   } else {
     quizApp.score = quizApp.score - quizApp.currentQuestion.cash;
-    // console.log(quizApp.score);
     $(".scoreBoard p").html(`${quizApp.score}`);
   }
   $(".questionContainer").hide();
+  $(`.selected`).removeClass(`selected`);
 };
 
 quizApp.errorCheck = function() {
@@ -227,10 +228,16 @@ quizApp.errorCheck = function() {
     if (quizApp.guess) {
       quizApp.checkAnswer(quizApp.guess);
     } else {
-      alert("You need to pick an answer");
+      alert("You should probably select one. You want to win fake money don't you?");
     }
   });
 };
+
+quizApp.hideBox = function() {
+  $(".hide").click(function() {
+    $(this).addClass("removeBox");
+  });
+}
 
 //initialization
 quizApp.init = function() {
@@ -239,6 +246,7 @@ quizApp.init = function() {
   this.growQuestion();
   this.selectOption();
   this.errorCheck();
+  this.hideBox();
 };
 
 //document ready
