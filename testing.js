@@ -3,10 +3,6 @@ const quizApp = {};
 
 //global variables
 quizApp.score = 0;
-// quizApp.currentScore = quizApp.score;
-// quizApp.answers = [];
-
-
 
 //Array of questions
 quizApp.questions = [
@@ -157,6 +153,7 @@ quizApp.questions = [
 ];
 
 //quiz functions
+
 //function to start the quiz, hides the start page
 quizApp.startQuiz = function() {
   $(`.startPage a`).click(function(e) {
@@ -168,9 +165,8 @@ quizApp.startQuiz = function() {
 //function to show the question when corresponding button is clicked
 quizApp.showQuestion = function() {
   $(".button").on("click", function() {
-    console.log("show")
     const buttonId = $(this).attr("id");
-    console.log(buttonId);
+    // console.log(buttonId);
     quizApp.questionContent(buttonId);
   });
 };
@@ -190,9 +186,7 @@ quizApp.questionContent =function (clickId){
 // if click id is same as array id                                  
     if (clickId == quizApp.questions[i].id) {
 //save that objects title and answers in two variables
-
       quizApp.currentQuestion = quizApp.questions[i];
-
       const question = quizApp.questions[i].title;
       const answers = quizApp.questions[i].answers;
 //grab the box with the click id and display the title and answers
@@ -209,37 +203,42 @@ quizApp.selectOption = function() {
   $(`.questionContainer`).on(`click`, `li`, function() {
     $(`.selected`).removeClass(`selected`);
     $(this).addClass(`selected`);
-    // let selectedAnswer = $(`li.selected`).text();
-    // console.log(selectedAnswer);
   });
 }
 
 //function to convert selected answer into number and checks selected option against correct answer
-quizApp.checkAnswer = function() {
-  $('.guess a').click(function(e){
-    console.log('uys')
-    e.preventDefault();
-    if ($('li.selected')) {
-      let guess = $('li.selected').text();
-      const answers = quizApp.currentQuestion.answers;
-      const correctAnswer = answers[quizApp.currentQuestion.correct];      
+quizApp.checkAnswer = function(answer) {
+      quizApp.answersArray = quizApp.currentQuestion.answers;
+      quizApp.correctAnswer = quizApp.answersArray[quizApp.currentQuestion.correct];      
 
-      if (guess === correctAnswer) {
+      if (answer === quizApp.correctAnswer) {
         quizApp.score = quizApp.score + quizApp.currentQuestion.cash
-        console.log(quizApp.score);
+        // console.log(quizApp.score);
         $('.scoreBoard p').html(`${quizApp.score}`)
       } else {
         quizApp.score = quizApp.score - quizApp.currentQuestion.cash
-        console.log(quizApp.score);
+        // console.log(quizApp.score);
         $('.scoreBoard p').html(`${quizApp.score}`);
       }
-    } else {
-      alert(`Please select an answer, you want to win fake money don't you?`);
-    }
-    // $(".questionContainer").toggleClass("change-size");
+
     $('.questionContainer').hide();
+}
+
+quizApp.errorCheck = function() {
+  $('.guess a').click(function(e){
+    e.preventDefault();
+
+    quizApp.guess = $("li.selected").text();
+
+    if (quizApp.guess) {
+      quizApp.checkAnswer(quizApp.guess)
+    } else {
+      alert('You need to pick an answer');      
+
+     }
   })
 }
+    
 
 //initialization
 quizApp.init = function() {
@@ -247,8 +246,7 @@ quizApp.init = function() {
   this.showQuestion();
   this.growQuestion();
   this.selectOption();
-  this.checkAnswer();
-  // this.verifyAnswer();
+  this.errorCheck();
 };
 
 //document ready
