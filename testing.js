@@ -3,7 +3,11 @@ const quizApp = {};
 
 //global variables
 quizApp.score = 0;
+// quizApp.answers = [];
 
+
+
+//Array of questions
 quizApp.questions = [
   //category 1 questions
   {
@@ -152,6 +156,7 @@ quizApp.questions = [
 ];
 
 //quiz functions
+//function to start the quiz, hides the start page
 quizApp.startQuiz = function() {
   $(`.startPage a`).click(function(e) {
     e.preventDefault();
@@ -159,29 +164,34 @@ quizApp.startQuiz = function() {
     $(`.quiz`).show();
   });
 };
+//function to show the question when corresponding button is clicked
 quizApp.showQuestion = function() {
   $(".button").on("click", function() {
     const buttonId = $(this).attr("id");
     // console.log(buttonId);
     quizApp.questionContent(buttonId);
-
   });
 };
+//function expands empty div to cover quizboard
 quizApp.growQuestion = function() {
   $(".button").on("click", function() {
     $('.questionContainer').toggleClass("change-size");
   });
 };
 
+//function pulls question from array that corresponds to button and dynamically adds content
 quizApp.questionContent = (clickId) => {
-                                    //for each item in quizapp.questions
+//for each item in quizapp.questions
    for (let i = 0; i < quizApp.questions.length; i++ ){    
-                                  // if click id is same as array id                                  
+// if click id is same as array id                                  
     if (clickId == quizApp.questions[i].id) {
-                                    //save that objects title and answers in two variables
+//save that objects title and answers in two variables
+
+      quizApp.currentQuestion = quizApp.questions[i];
+
       const question = quizApp.questions[i].title;
       const answers = quizApp.questions[i].answers;
-                                  //grab the box with the click id and display the title and answers
+//grab the box with the click id and display the title and answers
       $('.questionContainer').html(`<h2>${question}</h2><ul class="questions"></ul>`);
       for (let i = 0; i < answers.length; i++) {
         $('.questions').append(`<li>${answers[i]}</li>`);        
@@ -190,12 +200,40 @@ quizApp.questionContent = (clickId) => {
   };
 };
 
+//adds selected class to answer that is clicked for user feedback
 quizApp.selectOption = function() {
   $(`.questionContainer`).on(`click`, `li`, function() {
     $(`.selected`).removeClass(`selected`);
     $(this).addClass(`selected`);
+    let selectedAnswer = $(`li.selected`).text();
+    console.log(selectedAnswer);
   });
 }
+
+//function to convert selected answer into number and checks selected option against correct answer
+quizApp.checkAnswer = function() {
+  $('.guess a').click(function(e){
+    e.preventDefault();
+    if ($('li.selected')) {
+      console.log(quizApp.currentQuestion);
+      const answers = quizApp.currentQuestion.answers;
+      const correctAnswer = answers[quizApp.currentQuestion.correct];
+      console.log(correctAnswer);
+
+      
+    } else {
+      alert(`Please select an answer, you want to win fake money don't you?`);
+    }
+  })
+}
+
+// quizApp.verifyAnswer = function(guess) {
+//   let verify = quizApp.questions.correct;
+//   console.log(verify);
+//   if (verify === guess) {
+//     score++;
+//   }
+// }
 
 //initialization
 quizApp.init = function() {
@@ -203,6 +241,8 @@ quizApp.init = function() {
   this.showQuestion();
   this.growQuestion();
   this.selectOption();
+  this.checkAnswer();
+  // this.verifyAnswer();
 };
 
 //document ready
