@@ -221,6 +221,7 @@ quizApp.checkAnswer = function(answer) {
   $(`.selected`).removeClass(`selected`);
 };
 
+// checks to ensure an answer is selected and runs checkAnswer function if true
 quizApp.errorCheck = function() {
   $(".guess a").click(function(e) {
     e.preventDefault();
@@ -233,9 +234,30 @@ quizApp.errorCheck = function() {
   });
 };
 
+// disables previously answered questions from being clicked again
 quizApp.hideBox = function() {
   $(".hide").click(function() {
     $(this).addClass("removeBox");
+  });
+}
+
+// show results and allow restart
+quizApp.results = function() {
+  $(`.resultsRestart a`).click(function(e) {
+    e.preventDefault();
+    $(`.quiz`).hide();
+    $(`.results`).show();
+    $(".results p").html(`Congrats, your final score is: ${quizApp.score}`);
+  });
+};
+
+//restart function and resets questions
+quizApp.restart = function() {
+  $(`.restart a`).click(function(e) {
+    e.preventDefault();
+    $(`.results`).hide();
+    $(`.startPage`).show();
+    $(".hide").removeClass("removeBox");
   });
 }
 
@@ -247,6 +269,8 @@ quizApp.init = function() {
   this.selectOption();
   this.errorCheck();
   this.hideBox();
+  this.results();
+  this.restart();
 };
 
 //document ready
