@@ -1,5 +1,6 @@
 @import "setup";
 @import "mixinsAndVariables";
+@import "accessibility";
 @import "wrapper";
 @import "typography";
 @import "header";
@@ -11,8 +12,4 @@
 
 body {
   background: $main;
-}
-
-.selected {
-    color: red;
 }

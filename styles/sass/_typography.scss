@@ -25,6 +25,7 @@ header h2 {
 }
 
 .submit a {
+  font-family: $subHeading;
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 1.2px;
@@ -39,3 +40,19 @@ header h2 {
 .startPage h2 {
   font-size: 3rem;
 }
+
+.quiz h2 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.box button {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.scoreBoard {
+  font-size: 3rem;
+}
+

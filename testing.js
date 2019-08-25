@@ -160,6 +160,7 @@ quizApp.startQuiz = function() {
     e.preventDefault();
     $(`.startPage`).hide();
     $(`.quiz`).show();
+    $(".scoreBoard p").html(`0`);
   });
 };
 //function to show the question when corresponding button is clicked
@@ -258,6 +259,7 @@ quizApp.restart = function() {
     $(`.results`).hide();
     $(`.startPage`).show();
     $(".hide").removeClass("removeBox");
+    quizApp.score = 0;
   });
 }
 

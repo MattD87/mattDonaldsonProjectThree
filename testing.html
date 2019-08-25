@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <link rel="stylesheet" href="./styles/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <title>Welcome, to Matt's Party!</title>
   </head>
   <body>
@@ -22,13 +25,29 @@
         <div class="startPage">
           <h2>Explanation & Rules</h2>
           <p>
-            This little gameshow is all about web development! Except instead of winning prizes in front of a studio audience, you'll only win my respect in front of your computer screen. But trust me, that's worth a lot. Read the rules (or don't, I'm not your mom), and then click 'Start Quiz' to begin.
+            This little gameshow is all about web development! Except instead of
+            winning prizes in front of a studio audience, you'll only win my
+            respect in front of your computer screen. But trust me, that's worth
+            a lot. Read the rules (or don't, I'm not your mom), and then click
+            'Start Quiz' to begin.
           </p>
           <ul class="rules">
-            <li>You will be tested on several imporant categories related to front end development (back end developers be warned!)</li>
-            <li>Each question is worth the amount displayed when you click on it. You will gain or lose fake money based on this.</li>
-            <li>You don't have to answer every question, but I worked hard on them and you don't want to be rude do you?</li>
-            <li>At any time you can click 'Restart' to start over, but you should only do that if your pride is hurt when you get a question wrong.</li>
+            <li>
+              You will be tested on several imporant categories related to front
+              end development (back end developers be warned!)
+            </li>
+            <li>
+              Each question is worth the amount displayed when you click on it.
+              You will gain or lose fake money based on this.
+            </li>
+            <li>
+              You don't have to answer every question, but I worked hard on them
+              and you don't want to be rude do you?
+            </li>
+            <li>
+              At any time you can click 'Restart' to start over, but you should
+              only do that if your pride is hurt when you get a question wrong.
+            </li>
             <li>Have fun!</li>
           </ul>
           <div class="submit">
@@ -40,7 +59,7 @@
           <div class="quizBoard">
             <div class="column col1">
               <div class="box title">
-                <h2>Category 1</h2>
+                <h2>HTML</h2>
               </div>
               <div class="box hide">
                 <button class="button" id="1200">200</button>
@@ -61,7 +80,7 @@
 
             <div class="column col2">
               <div class="box title">
-                <h2>Category 2</h2>
+                <h2>CSS</h2>
               </div>
               <div class="box hide">
                 <button class="button" id="2200">200</button>
@@ -82,7 +101,7 @@
 
             <div class="column col3">
               <div class="box title">
-                <h2>Category 3</h2>
+                <h2>Javascript</h2>
               </div>
               <div class="box hide">
                 <button class="button" id="3200">200</button>
@@ -103,7 +122,7 @@
 
             <div class="column col4">
               <div class="box title">
-                <h2>Category 4</h2>
+                <h2>Grab Bag</h2>
               </div>
               <div class="box hide">
                 <button class="button" id="4200">200</button>
@@ -120,26 +139,29 @@
               <div class="box hide">
                 <button class="button" id="41000">1000</button>
               </div>
-            </div><!--end of column 4-->
+            </div>
+            <!--end of column 4-->
             <div class="questionContainer">
               <ul class="questions"></ul>
               <!-- <a href="#" class="check">Enter Guess</a> -->
-            </div>  
-          </div><!--end of quiz board-->
-          
-
-          <div class="scoreBoard">
-            <h3>Score:</h3>
-            <p><!--dynamically generated score goes here--></p>
+            </div>
           </div>
+          <!--end of quiz board-->
 
-          <div class="submit guess">
-            <a href="#"> Enter Guess</a>
+          <div class="quizInfo">
+            <div class="scoreBoard">
+              <h3>Score:</h3>
+              <p><!--dynamically generated score goes here--></p>
+            </div>
+
+            <div class="submit guess">
+              <a href="#"> Enter Guess</a>
+            </div>
           </div>
 
           <div class="resultsRestart">
-          <a href="#">Restart</a>
-        </div>
+            <a href="#">Restart</a>
+          </div>
         </section>
         <!--end of quiz-->
 

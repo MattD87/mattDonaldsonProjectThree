@@ -13,14 +13,3 @@
     padding: 8px;
     border: 3px solid $highlight;
 }
-
-.submit a:hover {
-    background: $secondary;
-    color: $main;
-}
-
-.submit a:focus {
-    background: $secondary;
-    color: $main;
-    border: 2px solid black;
-}
