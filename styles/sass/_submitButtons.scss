@@ -1,24 +1,26 @@
 .submit {
-    text-align: center;
-    padding: 2%;   
+    display: flex;
+    margin: auto;
+    margin-top: 16px;
 }
 
 .submit a {
     border: 1px solid black;
     text-decoration: none;
     text-align: center;      
-    background-color: white;
+    background-color: $text;
     color: black;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
+    padding: 8px;
+    border: 3px solid $highlight;
 }
 
 .submit a:hover {
-    color: blue;
+    background: $secondary;
+    color: $main;
 }
 
-// .guess {
-
-// }
+.submit a:focus {
+    background: $secondary;
+    color: $main;
+    border: 2px solid black;
+}

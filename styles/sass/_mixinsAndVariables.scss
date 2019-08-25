@@ -1,0 +1,15 @@
+// Colours
+$main: #060CE9;
+$secondary: #FFCC00;
+$text: #fffacd;
+$highlight: #454e4e;
+
+
+// Fonts
+@font-face {
+  font-family: headerFont;
+  src: url(../fonts/gyparody\hv.ttf)
+}
+
+$subHeading: 'Merriweather', serif;
+$body: 'Open Sans', sans-serif;

@@ -1,3 +1,41 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  font-size: 2rem;
+  font-family: $body;
+}
+
+h2,
+h3 {
+  font-family: $subHeading;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 10rem;
+  font-family: headerFont;
+  line-height: 10rem;
+  letter-spacing: 0.4rem;
+}
+
+header h2 {
+  font-size: 2.8rem;
+}
+
+.submit a {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.startPage {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.startPage h2 {
+  font-size: 3rem;
+}

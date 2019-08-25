@@ -1,4 +1,5 @@
 @import "setup";
+@import "mixinsAndVariables";
 @import "wrapper";
 @import "typography";
 @import "header";
@@ -9,7 +10,7 @@
 @import "queries";
 
 body {
-  background: darkblue;
+  background: $main;
 }
 
 .selected {
