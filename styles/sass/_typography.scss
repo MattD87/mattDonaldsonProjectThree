@@ -20,25 +20,25 @@ h1 {
   letter-spacing: 0.4rem;
 }
 
-header h2 {
-  font-size: 2.8rem;
+h2 {
+  font-size: 3rem;
 }
 
 .submit a {
   font-family: $subHeading;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
+.resultsRestart a {
+  font-size: 1.6rem;
+}
+
 .startPage {
   font-size: 1.6rem;
   line-height: 2.2rem;
-}
-
-.startPage h2 {
-  font-size: 3rem;
 }
 
 .quiz h2 {
@@ -54,5 +54,13 @@ header h2 {
 
 .scoreBoard {
   font-size: 3rem;
+}
+
+.resultsContainer h2 {
+  font-size: 4rem;
+}
+
+.resultsContainer p {
+font-size: 3.6rem;
 }
 

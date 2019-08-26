@@ -4,7 +4,18 @@
   margin: auto;
 }
 
-.results h2 {
-  text-align: center;
-  font-size: 30px;
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultsContainer h2 {
+padding-bottom: 40px;
+}
+
+.resultsContainer p {
+  color: $text;
+  padding-bottom: 20px;
 }

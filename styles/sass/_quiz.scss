@@ -12,7 +12,7 @@
 .quizBoard {
   display: flex;
   position: relative;
-  border: 4px solid $text;
+  border: 2px solid $dark;
 }
 
 .column {
@@ -21,7 +21,7 @@
 }
 
 .box {
-  border: 3px solid $highlight;
+  border: 2px solid $dark;
   border-bottom: none;
 }
 
@@ -29,9 +29,18 @@
   width: 100%;
   height: 100%;
   padding: 20px;
-  background: $main;
+  // background: $main;
   color: $secondary;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px $dark;
+}
+
+.box button{
+background: $highlight;
+border-style: none;
+}
+
+.title {
+  background: $dark;
 }
 
 .change-size {
@@ -41,7 +50,7 @@
 }
 
 .questionContainer {
-  border: 1px solid black;
+  // border: 1px solid $dark;
   background: $main;
   color: $text;
   display: flex;
@@ -51,6 +60,7 @@
 }
 
 .questionContainer h2 {
+  color: $secondary;
   padding-top: 40px;
 }
 
@@ -58,42 +68,42 @@
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  // background: $text;
-  // color: $main;
 }
 
 .questionContainer li {
   flex-direction: row;
-  margin: 20px 10px;
+  margin: 10px 10px;
   height: 120px;
   width: 46%;
   border: 1px solid $secondary;
   text-align: center;
   padding: 20px;
+  color: $text;
+  background: $highlight;
 }
 
 .removeBox button{
   pointer-events: none;
   text-decoration: line-through;
-  text-decoration-color: black;
+  text-decoration-color: $dark;
   background: $text;
   color: $highlight;
 }
 
-.selected {
-  color: $main;
+li.selected {
+  color: $highlight;
   background: $text;
 }
 
 .quizInfo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .scoreBoard {
   display: flex;
-  width: 50%;
-  padding-top: 20px;
+  width: 33%;
   color: $text;
 }
 
@@ -103,6 +113,18 @@
 }
 
 .guess {
-  justify-content: flex-end;
-  width: 50%;
+  width: 33%;
 }
+
+.resultsRestart {
+  justify-content: flex-end;
+  width: 33%;
+}
+
+.resultsRestart a {
+  background: $highlight;
+  color: $secondary;
+  border: 3px solid $text;
+}
+
+

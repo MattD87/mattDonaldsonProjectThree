@@ -1,10 +1,15 @@
 .questionContainer li:hover {
-  color: $text;
-  background: $secondary;
+  color: $main;
+  background: $text;
 }
 
 .button:hover {
   color: $text;
+}
+
+.button:focus {
+  background: $secondary;
+  color: $dark;
 }
 
 .submit a:hover {
@@ -15,5 +20,5 @@
 .submit a:focus {
     background: $secondary;
     color: $main;
-    border: 2px solid black;
+    border: 2px solid $dark;
 }
