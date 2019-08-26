@@ -68,13 +68,15 @@ border-style: none;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .questionContainer li {
   flex-direction: row;
   margin: 10px 10px;
   height: 120px;
-  width: 46%;
+  width: 42%;
   border: 1px solid $secondary;
   text-align: center;
   padding: 20px;

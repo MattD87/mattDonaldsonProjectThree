@@ -3,8 +3,9 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  background: $main;
-  color: $text;
+  background: $text;
+  color: $dark;
+  box-shadow: 5px 5px $dark;
 }
 
 .startPage h2 {

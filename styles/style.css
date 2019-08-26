@@ -254,7 +254,6 @@ textarea {
 .wrapper {
   max-width: 800px;
   margin: auto;
-  background: #3fb0ac;
 }
 
 html {
@@ -296,8 +295,8 @@ h2 {
 }
 
 .startPage {
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
 }
 
 .quiz h2 {
@@ -382,8 +381,10 @@ span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #3fb0ac;
-  color: #dddfd4;
+  background: #dddfd4;
+  color: #00171F;
+  -webkit-box-shadow: 5px 5px #00171F;
+          box-shadow: 5px 5px #00171F;
 }
 
 .startPage h2 {
@@ -484,6 +485,12 @@ span {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .questionContainer li {
@@ -493,7 +500,7 @@ span {
           flex-direction: row;
   margin: 10px 10px;
   height: 120px;
-  width: 46%;
+  width: 42%;
   border: 1px solid #fae596;
   text-align: center;
   padding: 20px;
@@ -586,6 +593,22 @@ li.selected {
 .resultsContainer p {
   color: #dddfd4;
   padding-bottom: 20px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 40px auto 0;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #dddfd4;
+  background: #173e43;
 }
 
 body {
