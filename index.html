@@ -15,7 +15,9 @@
     />
     <title>Welcome, to Matt's Party!</title>
   </head>
+  
   <body>
+    <!--Header-->
     <div class="wrapper">
       <header>
         <h1>Welcome to: <span>Matt's Party!</span></h1>
@@ -23,6 +25,7 @@
       </header>
     </div>
 
+    <!--landing page-->
     <main>
       <div class="wrapper">
         <section class="startPage">
@@ -58,6 +61,7 @@
           </div>
         </section>
 
+        <!--Quiz, hidden on start-->
         <section class="quiz">
           <div class="quizBoard">
             <div class="column col1">
@@ -79,7 +83,7 @@
               <div class="box hide">
                 <button class="button" id="11000">1000</button>
               </div>
-            </div>
+            </div> <!--end of column 1-->
 
             <div class="column col2">
               <div class="box title">
@@ -100,7 +104,7 @@
               <div class="box hide">
                 <button class="button" id="21000">1000</button>
               </div>
-            </div>
+            </div> <!--end of column 2-->
 
             <div class="column col3">
               <div class="box title">
@@ -121,7 +125,7 @@
               <div class="box hide">
                 <button class="button" id="31000">1000</button>
               </div>
-            </div>
+            </div> <!--end of column 3-->
 
             <div class="column col4">
               <div class="box title">
@@ -142,15 +146,15 @@
               <div class="box hide">
                 <button class="button" id="41000">1000</button>
               </div>
-            </div>
-            <!--end of column 4-->
-            <div class="questionContainer">
-              <ul class="questions"></ul>
-              <!-- <a href="#" class="check">Enter Guess</a> -->
-            </div>
-          </div>
-          <!--end of quiz board-->
+            </div><!--end of column 4-->
 
+            <!--question container-->
+            <div class="questionContainer">
+              <ul class="questions"><!--Dynamically added questions goes here--></ul>
+            </div>
+          </div><!--end of quiz board-->
+
+          <!--scoreboard, enter guess, and restart-->
           <div class="quizInfo">
             <div class="scoreBoard">
               <h3>Score:</h3>
@@ -164,23 +168,20 @@
             <div class="submit resultsRestart">
               <a href="#">Restart</a>
             </div>
-          </div>
-        </section>
-        <!--end of quiz-->
+          </div><!--end of quizInfo-->
+        </section><!--end of quiz-->
 
         <section class="results">
           <div class="resultsContainer">
             <h2>How Did You Do?</h2>
-            <p></p>
+            <p><!--Dynamically added score goes here--></p>
 
             <div class="submit restart">
               <a href="#"> Start Over</a>
             </div>
           </div>
-        </section>
-        <!--end of results-->
-      </div>
-      <!--end of wrapper-->
+        </section><!--end of results-->
+      </div><!--end of wrapper-->
     </main>
 
     <footer>
@@ -189,11 +190,13 @@
       </div>
     </footer>
 
+    <!--jquery and external javascript-->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
     <script src="script.js"></script>
+    
   </body>
 </html>

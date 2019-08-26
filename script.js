@@ -188,6 +188,7 @@ quizApp.startQuiz = function() {
     $(".scoreBoard p").html(`0`);
   });
 };
+
 //function to show the question when corresponding button is clicked
 quizApp.showQuestion = function() {
   $(".button").on("click", function() {
@@ -195,6 +196,7 @@ quizApp.showQuestion = function() {
     quizApp.questionContent(buttonId);
   });
 };
+
 //function expands empty div to cover quizboard
 quizApp.growQuestion = function() {
   $(".button").on("click", function() {
@@ -269,7 +271,7 @@ quizApp.hideBox = function() {
   });
 };
 
-// show results and allow restart
+// show results and allow restart after warning
 quizApp.results = function() {
   $(`.resultsRestart a`).click(function(e) {
     e.preventDefault();

@@ -1,3 +1,4 @@
+//overall quiz containter, hidden to start
 .quiz {
   display: none;
   padding: 8px;
@@ -9,6 +10,7 @@
   text-align: center;
 }
 
+//Quiz board styling
 .quizBoard {
   display: flex;
   position: relative;
@@ -29,7 +31,6 @@
   width: 100%;
   height: 100%;
   padding: 20px;
-  // background: $main;
   color: $secondary;
   text-shadow: 2px 2px $dark;
 }
@@ -43,6 +44,7 @@ border-style: none;
   background: $dark;
 }
 
+//dynamic classes and question container styling
 .change-size {
   position: absolute;
   width: 100%;
@@ -50,7 +52,6 @@ border-style: none;
 }
 
 .questionContainer {
-  // border: 1px solid $dark;
   background: $main;
   color: $text;
   display: flex;
@@ -97,6 +98,7 @@ li.selected {
   background: $text;
 }
 
+//scoreboard, guess button, and restart button
 .quizInfo {
   display: flex;
   justify-content: space-between;
