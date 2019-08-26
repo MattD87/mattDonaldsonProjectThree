@@ -205,7 +205,7 @@ quizApp.growQuestion = function() {
       //   opacity: 0.8,
       // }, "slow")
       .show()
-      .addClass("change-size");
+      .addClass("changeSize");
   });
 };
 

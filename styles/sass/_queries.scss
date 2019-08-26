@@ -1,5 +1,117 @@
-@mixin mq-tablet {
-  @media (max-width: 768px) {
-    @content;
+//Large Screens
+@media(min-width: 1400px) {
+  header {
+    margin-top: 40px;
+  }
+  
+  main {
+    min-height: 50%;
+  }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 1024px){
+  //no media queries, this is the default view
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px){
+  main {
+    min-height: 60%;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px){
+  body {
+    font-size: 1.6rem;
+  }
+
+  header {
+    min-height: 400px;
+  }
+
+  h1 {
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  .quizBoard {
+    flex-wrap: wrap;
+  }
+
+  .column {
+    justify-content: center;
+    align-items: center;
+    width: 44%;
+    margin: auto;
+    margin: 10px;
+  }
+
+  .box button {
+    font-size: 2rem;
+  }
+
+  .title h2 {
+    font-size: 2.2rem;
+    overflow: hidden;
+  }
+
+  .title {
+    height: 80px;
+  }
+
+  .quizInfo {
+    flex-direction: column;
+  }
+
+  .resultsRestart {
+    width: auto;
+  }
+
+  .resultsContainer {
+    text-align: center;
+  }
+
+}
+/*Even smaller*/
+@media(max-width: 320px){
+body {
+  font-size: 1rem;
+}
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  header {
+    min-height: 300px;
+  }
+
+  .startPage {
+    padding: 8px;
+  }
+
+  .column {
+    width: 42%;
+  }
+
+  .questionContainer ul {
+    margin: 12px;
+  }
+
+  .quizInfo {
+    margin-top: 12px;
+  }
+  .scoreBoard h3 {
+    padding-right: 6px;
   }
 }

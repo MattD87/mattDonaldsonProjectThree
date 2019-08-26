@@ -23,3 +23,20 @@
   color: $main;
   border: 2px solid $dark;
 }
+
+.socialLinks i:hover {
+  color: $secondary;
+}
+
+.socialLinks i:focus {
+  color: $secondary;
+}
+
+footer a:hover {
+  color: $secondary;
+}
+
+footer a:focus {
+  color: $secondary;
+  text-decoration: underline;
+}

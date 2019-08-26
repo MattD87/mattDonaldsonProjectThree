@@ -11,6 +11,10 @@
 @import "footer";
 @import "queries";
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: $main;
 }
