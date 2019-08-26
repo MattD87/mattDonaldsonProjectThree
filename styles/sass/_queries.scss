@@ -1,27 +1,27 @@
 //Large Screens
-@media(min-width: 1400px) {
+@media (min-width: 1400px) {
   header {
     margin-top: 40px;
   }
-  
+
   main {
     min-height: 50%;
   }
 }
 
 /* Portrait tablet and small desktops */
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
   //no media queries, this is the default view
 }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px){
+@media (max-width: 768px) {
   main {
     min-height: 60%;
   }
 }
 /* Landscape phones and down */
-@media (max-width: 480px){
+@media (max-width: 480px) {
   body {
     font-size: 1.6rem;
   }
@@ -75,13 +75,12 @@
   .resultsContainer {
     text-align: center;
   }
-
 }
 /*Even smaller*/
-@media(max-width: 320px){
-body {
-  font-size: 1rem;
-}
+@media (max-width: 320px) {
+  body {
+    font-size: 1rem;
+  }
 
   h1 {
     font-size: 4rem;
