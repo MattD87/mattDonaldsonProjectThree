@@ -27,7 +27,8 @@
   border-bottom: none;
 }
 
-.box button, .title {
+.box button,
+.title {
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -35,9 +36,9 @@
   text-shadow: 2px 2px $dark;
 }
 
-.box button{
-background: $highlight;
-border-style: none;
+.box button {
+  background: $highlight;
+  border-style: none;
 }
 
 .title {
@@ -85,7 +86,7 @@ border-style: none;
   background: $highlight;
 }
 
-.removeBox button{
+.removeBox button {
   pointer-events: none;
   text-decoration: line-through;
   text-decoration-color: $dark;
@@ -130,5 +131,3 @@ li.selected {
   color: $secondary;
   border: 3px solid $text;
 }
-
-

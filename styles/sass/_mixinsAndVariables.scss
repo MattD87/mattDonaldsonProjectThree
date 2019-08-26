@@ -3,14 +3,13 @@ $main: #3fb0ac;
 $secondary: #fae596;
 $text: #dddfd4;
 $highlight: #173e43;
-$dark: #00171F;
-
+$dark: #00171f;
 
 // Fonts
 @font-face {
   font-family: headerFont;
-  src: url(../fonts/gyparody\hv.ttf)
+  src: url(../fonts/gyparody\hv.ttf);
 }
 
-$subHeading: 'Merriweather', serif;
-$body: 'Open Sans', sans-serif;
+$subHeading: "Merriweather", serif;
+$body: "Open Sans", sans-serif;

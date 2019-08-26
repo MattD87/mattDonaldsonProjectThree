@@ -237,7 +237,7 @@ textarea {
 
 .button:focus {
   background: #fae596;
-  color: #00171F;
+  color: #00171f;
 }
 
 .submit a:hover {
@@ -248,7 +248,7 @@ textarea {
 .submit a:focus {
   background: #fae596;
   color: #3fb0ac;
-  border: 2px solid #00171F;
+  border: 2px solid #00171f;
 }
 
 .wrapper {
@@ -335,9 +335,10 @@ header {
           flex-direction: column;
 }
 
-header h1, header h2 {
+header h1,
+header h2 {
   color: #fae596;
-  text-shadow: 2px 2px #00171F;
+  text-shadow: 2px 2px #00171f;
   margin: auto;
 }
 
@@ -362,11 +363,11 @@ span {
 }
 
 .submit a {
-  border: 1px solid #00171F;
+  border: 1px solid #00171f;
   text-decoration: none;
   text-align: center;
   background-color: #dddfd4;
-  color: #00171F;
+  color: #00171f;
   padding: 8px;
   border: 3px solid #173e43;
   border-radius: 10px;
@@ -383,9 +384,9 @@ span {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #dddfd4;
-  color: #00171F;
-  -webkit-box-shadow: 5px 5px #00171F;
-          box-shadow: 5px 5px #00171F;
+  color: #00171f;
+  -webkit-box-shadow: 5px 5px #00171f;
+          box-shadow: 5px 5px #00171f;
 }
 
 .startPage h2 {
@@ -420,7 +421,7 @@ span {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  border: 2px solid #00171F;
+  border: 2px solid #00171f;
 }
 
 .column {
@@ -429,16 +430,17 @@ span {
 }
 
 .box {
-  border: 2px solid #00171F;
+  border: 2px solid #00171f;
   border-bottom: none;
 }
 
-.box button, .title {
+.box button,
+.title {
   width: 100%;
   height: 100%;
   padding: 20px;
   color: #fae596;
-  text-shadow: 2px 2px #00171F;
+  text-shadow: 2px 2px #00171f;
 }
 
 .box button {
@@ -447,7 +449,7 @@ span {
 }
 
 .title {
-  background: #00171F;
+  background: #00171f;
 }
 
 .change-size {
@@ -512,8 +514,8 @@ span {
 .removeBox button {
   pointer-events: none;
   text-decoration: line-through;
-  -webkit-text-decoration-color: #00171F;
-          text-decoration-color: #00171F;
+  -webkit-text-decoration-color: #00171f;
+          text-decoration-color: #00171f;
   background: #dddfd4;
   color: #173e43;
 }

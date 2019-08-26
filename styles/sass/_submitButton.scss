@@ -1,16 +1,16 @@
 .submit {
-    display: flex;
-    margin: auto;
-    margin-top: 16px;
+  display: flex;
+  margin: auto;
+  margin-top: 16px;
 }
 
 .submit a {
-    border: 1px solid $dark;
-    text-decoration: none;
-    text-align: center;      
-    background-color: $text;
-    color: $dark;
-    padding: 8px;
-    border: 3px solid $highlight;
-    border-radius: 10px;
+  border: 1px solid $dark;
+  text-decoration: none;
+  text-align: center;
+  background-color: $text;
+  color: $dark;
+  padding: 8px;
+  border: 3px solid $highlight;
+  border-radius: 10px;
 }
